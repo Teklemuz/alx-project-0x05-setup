@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "../common/Button";
 import { usePathname } from "next/navigation";
 import { useCount } from "@/context/CountContext";
@@ -14,17 +15,13 @@ const Header: React.FC = () => {
         <div className="flex gap-4">
           {!["/counter-app"].includes(pathname) ? (
             <>
-              <Button 
-                buttonLabel="Sign In" 
-                buttonSize="text-lg"  // You can adjust this as needed
-                buttonBackgroundColor="red" 
-                action={() => console.log("Sign In clicked")}  // Add an action for the button
+              <Button
+                buttonLabel="Sign In"
+                buttonBackgroundColor="red"
               />
-              <Button 
-                buttonLabel="Sign Up" 
-                buttonSize="text-lg"  // You can adjust this as needed
-                buttonBackgroundColor="blue" 
-                action={() => console.log("Sign Up clicked")}  // Add an action for the button
+              <Button
+                buttonLabel="Sign Up"
+                buttonBackgroundColor="blue"
               />
             </>
           ) : (
